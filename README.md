@@ -1,2 +1,5 @@
-# dremio
-Dremio sample dataset
+# spiceai/dremio
+
+```shell
+spice add spiceai/dremio
+```
