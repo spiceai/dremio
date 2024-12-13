@@ -1,0 +1,18 @@
+version: v1beta1
+kind: Spicepod
+name: dremio
+
+datasets:
+- from: dremio:datasets.taxi_trips
+  name: taxi_trips
+  params:
+    dremio_endpoint: grpc://20.163.171.8:32010
+
+- from: dremio:datasets.taxi_trips
+  name: taxi_trips_accelerated
+  params:
+    dremio_endpoint: grpc://20.163.171.8:32010
+  acceleration:
+    enabled: true
+    refresh_interval: 10s
+    refresh_mode: full
